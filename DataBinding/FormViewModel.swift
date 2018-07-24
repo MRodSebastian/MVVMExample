@@ -6,32 +6,26 @@
 //  Copyright © 2018 Manu Rodríguez. All rights reserved.
 //
 
-import Foundation
+import RxSwift
 
-struct FormViewModel{
-    let name :Observable<String> = Observable()
-    let approxSalary :Observable<Float> = Observable()
-    let yearOfExperience :Observable<Double> = Observable()
-    
-    func getName() -> String{
-        if let name = name.value{
-            return name
-        }
-        return ""
+class FormViewModel{
+    let username = Variable<String>("")
+    let salaryUser = Variable<Float>(0)
+    let experienceUser = Variable<Double>(0)
+   
+    var name :Observable<String>{
+        return self.username.asObservable().map{$0.capitalized}
     }
     
-    func getSalary() -> String{
-        if let approxSalary = approxSalary.value{
-            let normalizedValue = approxSalary / 1000.0
-            return "\(normalizedValue)"
-        }
-        return ""
+    var salary :Observable<Float>{
+        return self.salaryUser.asObservable().map{$0*1000.0}
     }
     
-    func getExperienceString() -> String{
-        if let years = yearOfExperience.value{
-            return "\(years) years"
-        }
-        return ""
+    var experience :Observable<Double>{
+        return self.experienceUser.asObservable()
+    }
+    
+    var isValid : Observable<Bool>{
+        return self.username.asObservable().map{$0.count > 0}
     }
 }

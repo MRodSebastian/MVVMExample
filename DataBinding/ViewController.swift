@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
 
@@ -16,19 +18,22 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var nameMaped: UILabel!
     @IBOutlet weak var salaryMaped: UILabel!
+    @IBOutlet weak var sliderLabel: UILabel!
     @IBOutlet weak var selectedYearsOfExperience: UILabel!
     
-    var viewModel :FormViewModel!
+    @IBOutlet weak var testButton: UIButton!
+    
+    var viewModel = FormViewModel()
+    var disposeBag = DisposeBag()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationItem.title = "MVVM Example"
-        setupBindings()
+        self.navigationItem.title = "MVVM with RXSwift"
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = FormViewModel()
+        setupBindings()
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,21 +42,18 @@ class ViewController: UIViewController {
     }
 
     private func setupBindings(){
-        nameField.bind(with: viewModel.name)
-        salaryRangeSlider.bind(with: viewModel.approxSalary)
-        yearsOfExperienceStepper.bind(with: viewModel.yearOfExperience)
+        nameField.rx.text.orEmpty.bind(to: viewModel.username).disposed(by: disposeBag)
+        viewModel.name.bind(to: nameMaped.rx.text).disposed(by: disposeBag)
         
-        nameMaped.observe(for: viewModel.name) { [unowned self](_) in
-            self.nameMaped.text = self.viewModel.getName()
-        }
+        salaryRangeSlider.rx.value.bind(to: viewModel.salaryUser).disposed(by: disposeBag)
+        viewModel.salary.map{ String($0) }.bind(to: salaryMaped.rx.text).disposed(by: disposeBag)
+        viewModel.salary.map{ String($0) }.bind(to: sliderLabel.rx.text).disposed(by: disposeBag)
         
-        salaryMaped.observe(for: viewModel.approxSalary) { [unowned self](_) in
-            self.salaryMaped.text = self.viewModel.getSalary()
-        }
         
-        selectedYearsOfExperience.observe(for: viewModel.yearOfExperience) { [unowned self](_) in
-            self.selectedYearsOfExperience.text = self.viewModel.getExperienceString()
-        }
+        yearsOfExperienceStepper.rx.value.bind(to: viewModel.experienceUser).disposed(by: disposeBag)
+        viewModel.experience.map{ String($0) }.bind(to: selectedYearsOfExperience.rx.text).disposed(by: disposeBag)
+
+        viewModel.isValid.map{$0}.bind(to: testButton.rx.isEnabled).disposed(by: disposeBag)
     }
 
 }

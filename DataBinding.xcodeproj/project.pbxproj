@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		329E07D221071037002077DE /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 329E07D021071037002077DE /* RxCocoa.framework */; };
+		329E07D321071037002077DE /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 329E07D121071037002077DE /* RxSwift.framework */; };
 		32F8E9292105C16100E6DA44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F8E9282105C16100E6DA44 /* AppDelegate.swift */; };
 		32F8E92B2105C16100E6DA44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F8E92A2105C16100E6DA44 /* ViewController.swift */; };
 		32F8E92E2105C16100E6DA44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32F8E92C2105C16100E6DA44 /* Main.storyboard */; };
@@ -14,12 +16,6 @@
 		32F8E9332105C16200E6DA44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32F8E9312105C16200E6DA44 /* LaunchScreen.storyboard */; };
 		32F8E93E2105C16200E6DA44 /* DataBindingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F8E93D2105C16200E6DA44 /* DataBindingTests.swift */; };
 		32F8E9492105C16200E6DA44 /* DataBindingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F8E9482105C16200E6DA44 /* DataBindingUITests.swift */; };
-		32F8E9582105C1BD00E6DA44 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F8E9572105C1BD00E6DA44 /* Observable.swift */; };
-		32F8E95A2105C3CF00E6DA44 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F8E9592105C3CF00E6DA44 /* Bindable.swift */; };
-		32F8E95C2105C85E00E6DA44 /* UIControls+Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F8E95B2105C85E00E6DA44 /* UIControls+Bindable.swift */; };
-		32F8E95E2105D5D000E6DA44 /* NSObject+Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F8E95D2105D5D000E6DA44 /* NSObject+Observable.swift */; };
-		32F8E9662105D6D800E6DA44 /* BlockBasedSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F8E9632105D6D800E6DA44 /* BlockBasedSelector.m */; };
-		32F8E9672105D6D800E6DA44 /* BlockBasedSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F8E9652105D6D800E6DA44 /* BlockBasedSelector.swift */; };
 		32F8E9692105D8BF00E6DA44 /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F8E9682105D8BF00E6DA44 /* FormViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		329E07D021071037002077DE /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		329E07D121071037002077DE /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		329E07D42107135B002077DE /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		32F8E9252105C16100E6DA44 /* DataBinding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataBinding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32F8E9282105C16100E6DA44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32F8E92A2105C16100E6DA44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,14 +53,6 @@
 		32F8E9442105C16200E6DA44 /* DataBindingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataBindingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32F8E9482105C16200E6DA44 /* DataBindingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBindingUITests.swift; sourceTree = "<group>"; };
 		32F8E94A2105C16200E6DA44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		32F8E9572105C1BD00E6DA44 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
-		32F8E9592105C3CF00E6DA44 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
-		32F8E95B2105C85E00E6DA44 /* UIControls+Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControls+Bindable.swift"; sourceTree = "<group>"; };
-		32F8E95D2105D5D000E6DA44 /* NSObject+Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Observable.swift"; sourceTree = "<group>"; };
-		32F8E9622105D6D700E6DA44 /* DataBinding-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DataBinding-Bridging-Header.h"; sourceTree = "<group>"; };
-		32F8E9632105D6D800E6DA44 /* BlockBasedSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockBasedSelector.m; sourceTree = "<group>"; };
-		32F8E9642105D6D800E6DA44 /* BlockBasedSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockBasedSelector.h; sourceTree = "<group>"; };
-		32F8E9652105D6D800E6DA44 /* BlockBasedSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockBasedSelector.swift; sourceTree = "<group>"; };
 		32F8E9682105D8BF00E6DA44 /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				329E07D221071037002077DE /* RxCocoa.framework in Frameworks */,
+				329E07D321071037002077DE /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +83,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		329E07CF21071037002077DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				329E07D42107135B002077DE /* RxBlocking.framework */,
+				329E07D021071037002077DE /* RxCocoa.framework */,
+				329E07D121071037002077DE /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		32F8E91C2105C16100E6DA44 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +100,7 @@
 				32F8E93C2105C16200E6DA44 /* DataBindingTests */,
 				32F8E9472105C16200E6DA44 /* DataBindingUITests */,
 				32F8E9262105C16100E6DA44 /* Products */,
+				329E07CF21071037002077DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,7 +117,6 @@
 		32F8E9272105C16100E6DA44 /* DataBinding */ = {
 			isa = PBXGroup;
 			children = (
-				32F8E9562105C1AD00E6DA44 /* Binding */,
 				32F8E9282105C16100E6DA44 /* AppDelegate.swift */,
 				32F8E92A2105C16100E6DA44 /* ViewController.swift */,
 				32F8E9682105D8BF00E6DA44 /* FormViewModel.swift */,
@@ -143,29 +146,6 @@
 			path = DataBindingUITests;
 			sourceTree = "<group>";
 		};
-		32F8E9562105C1AD00E6DA44 /* Binding */ = {
-			isa = PBXGroup;
-			children = (
-				32F8E9612105D69500E6DA44 /* BlockBasedSelector */,
-				32F8E9572105C1BD00E6DA44 /* Observable.swift */,
-				32F8E9592105C3CF00E6DA44 /* Bindable.swift */,
-				32F8E95B2105C85E00E6DA44 /* UIControls+Bindable.swift */,
-				32F8E95D2105D5D000E6DA44 /* NSObject+Observable.swift */,
-			);
-			path = Binding;
-			sourceTree = "<group>";
-		};
-		32F8E9612105D69500E6DA44 /* BlockBasedSelector */ = {
-			isa = PBXGroup;
-			children = (
-				32F8E9642105D6D800E6DA44 /* BlockBasedSelector.h */,
-				32F8E9632105D6D800E6DA44 /* BlockBasedSelector.m */,
-				32F8E9652105D6D800E6DA44 /* BlockBasedSelector.swift */,
-				32F8E9622105D6D700E6DA44 /* DataBinding-Bridging-Header.h */,
-			);
-			path = BlockBasedSelector;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,6 +156,7 @@
 				32F8E9212105C16100E6DA44 /* Sources */,
 				32F8E9222105C16100E6DA44 /* Frameworks */,
 				32F8E9232105C16100E6DA44 /* Resources */,
+				329E07D621071390002077DE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -293,19 +274,35 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		329E07D621071390002077DE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		32F8E9212105C16100E6DA44 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32F8E9662105D6D800E6DA44 /* BlockBasedSelector.m in Sources */,
 				32F8E92B2105C16100E6DA44 /* ViewController.swift in Sources */,
-				32F8E95C2105C85E00E6DA44 /* UIControls+Bindable.swift in Sources */,
 				32F8E9692105D8BF00E6DA44 /* FormViewModel.swift in Sources */,
-				32F8E9582105C1BD00E6DA44 /* Observable.swift in Sources */,
-				32F8E95A2105C3CF00E6DA44 /* Bindable.swift in Sources */,
-				32F8E95E2105D5D000E6DA44 /* NSObject+Observable.swift in Sources */,
-				32F8E9672105D6D800E6DA44 /* BlockBasedSelector.swift in Sources */,
 				32F8E9292105C16100E6DA44 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +479,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49JN32HL2M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DataBinding/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -503,6 +504,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49JN32HL2M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DataBinding/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
